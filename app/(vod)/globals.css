@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer utilities {
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+          display: none;
+      }
+     /* Hide scrollbar for IE, Edge and Firefox */
+      .no-scrollbar {
+          -ms-overflow-style: none;  /* IE and Edge */
+          scrollbar-width: none;  /* Firefox */
+    }
+}
+
+/* Animation de la card movie */
+/* .card-film:hover{
+    animation: card 0.6s cubic-bezier(0.25, 0.1, 0.25, 1.0) 1s;
+} */
+
+@keyframes card {
+    0% {
+      transform: scale(1) translateY(0rem);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: scale(1.2) translateY(-4rem);
+      opacity: 100%;
+    }
+  }
+  
+  @keyframes card-exit {
+    0% {
+      transform: scale(1.2) translateY(-20px);
+      box-shadow: none;
+      opacity: 100%;
+    } 
+  
+    50% {
+      box-shadow: none;
+    }
+  
+    100% {
+      transform: scale(1) translateY(0px);
+      box-shadow: none;
+      opacity: 0;
+    }
+  }
+  
+  
+  @keyframes card-cont-enter {
+    0% {
+      opacity: 0%;
+    } 
+    100% {
+      opacity: 100%;
+    }
+  }
+  
+  @keyframes card-cont-exit {
+    0% {
+      opacity: 100%;
+    } 
+    100% {
+      opacity: 0%;
+    }
+  }
+  
+/* Animation sur l'input de recherche */
+
+.slideInRight {
+    -webkit-animation-name: slideInRight;
+    animation-name: slideInRight;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes slideInRight {
+    0% {
+        -webkit-transform: translateX(10%);
+        transform: translateX(10%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+}
+@keyframes slideInRight {
+    0% {
+        -webkit-transform: translateX(10%);
+        transform: translateX(10%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+} 
+
+.slideInUp {
+    -webkit-animation-name: slideInUp;
+    animation-name: slideInUp;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.5s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes slideInUp {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+}
+@keyframes slideInUp {
+    0% {
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+        visibility: visible;
+    }
+    100% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+} 
+
+.slideOutDown {
+    -webkit-animation-name: slideOutDown;
+    animation-name: slideOutDown;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes slideOutDown {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        visibility: hidden;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+}
+@keyframes slideOutDown {
+    0% {
+        -webkit-transform: translateY(0);
+        transform: translateY(0);
+    }
+    100% {
+        visibility: hidden;
+        -webkit-transform: translateY(100%);
+        transform: translateY(100%);
+    }
+} 
+
+/* Animation de la modal */
+.zoomIn {
+    -webkit-animation-name: zoomIn;
+    animation-name: zoomIn;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+}
+@-webkit-keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1);
+        transform: scale3d(.1, .1, .1);
+    }
+    50% {
+        opacity: 1;
+    }
+}
+@keyframes zoomIn {
+    0% {
+        opacity: 0;
+        -webkit-transform: scale3d(.1, .1, .1);
+        transform: scale3d(.1, .1, .1);
+    }
+    50% {
+        opacity: 1;
+    }
+} 
